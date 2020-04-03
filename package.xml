@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>jsoncpp</name>
+  <version>2.0.0</version>
+  <description>The jsoncpp package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="twx@gs-robot.com">Tian Wen Xin</maintainer>
+
+  <license>BSD</license>
+
+  <author email="twx@gs-robot.com">Tian Wen Xin</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
