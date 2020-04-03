@@ -3099,6 +3099,7 @@ JSONCPP_STRING Value::asString() const {
     return valueToString(value_.real_);
   default:
     JSON_FAIL_MESSAGE("Type is not convertible to string");
+    return "";
   }
 }
 
@@ -3132,6 +3133,7 @@ Value::Int Value::asInt() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to Int.");
+  return 0;
 }
 
 Value::UInt Value::asUInt() const {
@@ -3154,6 +3156,7 @@ Value::UInt Value::asUInt() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to UInt.");
+  return 0;
 }
 
 #if defined(JSON_HAS_INT64)
@@ -3177,6 +3180,7 @@ Value::Int64 Value::asInt64() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to Int64.");
+  return 0;
 }
 
 Value::UInt64 Value::asUInt64() const {
@@ -3198,6 +3202,7 @@ Value::UInt64 Value::asUInt64() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to UInt64.");
+  return 0;
 }
 #endif // if defined(JSON_HAS_INT64)
 
@@ -3237,6 +3242,7 @@ double Value::asDouble() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to double.");
+  return 0.0;
 }
 
 float Value::asFloat() const {
@@ -3260,6 +3266,7 @@ float Value::asFloat() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to float.");
+  return 0.0;
 }
 
 bool Value::asBool() const {
@@ -3279,6 +3286,7 @@ bool Value::asBool() const {
     break;
   }
   JSON_FAIL_MESSAGE("Value is not convertible to bool.");
+  return false;
 }
 
 bool Value::isConvertibleTo(ValueType other) const {
